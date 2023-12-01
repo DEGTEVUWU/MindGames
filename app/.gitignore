@@ -31,6 +31,7 @@ bin
 .idea/
 .factorypath 
 
+# build
 
 ### Eclipse ###
 #.apt_generated
