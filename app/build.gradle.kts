@@ -20,3 +20,6 @@ java {
 val run by tasks.getting(JavaExec::class) {
     standardInput = System.`in`
 }
+tasks.getByName("run", JavaExec::class) {
+    standardInput = System.`in`
+}
