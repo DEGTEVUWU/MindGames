@@ -6,17 +6,19 @@ public class App {
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
+        System.out.println("2 - Even;");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         String userChoice = scan.next();
         if(userChoice.equals("1")) {
             Cli.console();
         }
-        //Choice.choice();
+        if(userChoice.equals("2")) {
+            Parity_check.check();
+        }
 
 
 
-        //System.out.println("Welcome to the Brain Games!");
-        //Cli.console();
+
     }
 }
