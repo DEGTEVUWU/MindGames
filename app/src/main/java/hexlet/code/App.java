@@ -10,11 +10,11 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         String userChoice = scan.next();
-        if(userChoice.equals("1")) {
+        if (userChoice.equals("1")) {
             Cli.console();
         }
-        if(userChoice.equals("2")) {
-            Parity_check.check();
+        if (userChoice.equals("2")) {
+            ParityCheck.check();
         }
 
 

@@ -1,7 +1,7 @@
 package hexlet.code;
 import java.util.Random;
 import java.util.Scanner;
-public class Parity_check {
+public class ParityCheck {
     public static void check() {
         System.out.println("");
         System.out.println("Welcome to the Brain Games!");
@@ -12,7 +12,7 @@ public class Parity_check {
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-        for(var i = 0; i < 3; i++) {
+        for (var i = 0; i < 3; i++) {
             Random rnd = new Random(System.currentTimeMillis());
             int number = rnd.nextInt(200);
             System.out.println("Question: " + number);
@@ -34,14 +34,13 @@ public class Parity_check {
                 System.out.println(answer1 + wrongAmswer + "'no'.");
                 System.out.println(wrongAnswer2srting + userName);
                 break;
-            }
-            else {
-                if(number % 2 == 0) {
+            } else {
+                if (number % 2 == 0) {
                     System.out.println("'" + answer1 + "'" + wrongAmswer + "'yes'.");
                     System.out.println(wrongAnswer2srting + userName);
                     break;
                 }
-                if(number % 2 == 1) {
+                if (number % 2 == 1) {
                     System.out.println("'" + answer1 + "'" + wrongAmswer + "'no'.");
                     System.out.println(wrongAnswer2srting + userName);
                     break;
