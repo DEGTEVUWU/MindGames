@@ -3,3 +3,6 @@
 
 https://asciinema.org/a/iCAtQuO9CZc8fcQH27SKMPqwQ 
 #пример работы игры "Проверка на четность"
+
+https://asciinema.org/a/nuOedDRlSElRhJginutvuWJXi
+#пример работы игры "Калькулятор"
