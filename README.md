@@ -6,3 +6,6 @@ https://asciinema.org/a/iCAtQuO9CZc8fcQH27SKMPqwQ
 
 https://asciinema.org/a/nuOedDRlSElRhJginutvuWJXi
 #пример работы игры "Калькулятор"
+
+https://asciinema.org/a/8AvkkouXMFPpmBC5lf4KHIUb9
+#пример работы игры "Наибольший общий делитель"
