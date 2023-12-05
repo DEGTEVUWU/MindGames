@@ -1,13 +1,11 @@
 package hexlet.code;
 
-import java.util.Scanner;
-
 public class Engine {
 
     public static String userName;
     public static String wrongAnswer = " is wrong answer ;(. Correct answer was ";
     public static  String wrongAnswer2srting = "Let's try again, ";
-    Engine (String userName) {
+    Engine(String userName) {
         this.userName = userName;
     }
     public static String getUserName() {

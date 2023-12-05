@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 import hexlet.code.Engine;
-import hexlet.code.Engine.*;
+
 public class ParityCheck {
     public static void check() {
         Engine.comunication();
@@ -58,8 +58,8 @@ public class ParityCheck {
                     break;
                 }
             }
-
+            System.out.println("Congratulations, " + userName + "!");
         }
-        System.out.println("Congratulations, " + userName + "!");
+
     }
 }

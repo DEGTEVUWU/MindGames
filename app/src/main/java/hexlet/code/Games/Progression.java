@@ -53,7 +53,5 @@ public class Progression {
         }
         System.out.println("Congratulations, " + userName + "!");
     }
-
-
 }
 
