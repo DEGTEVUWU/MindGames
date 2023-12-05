@@ -9,3 +9,6 @@ https://asciinema.org/a/nuOedDRlSElRhJginutvuWJXi
 
 https://asciinema.org/a/8AvkkouXMFPpmBC5lf4KHIUb9
 #пример работы игры "Наибольший общий делитель"
+
+https://asciinema.org/a/aGQxDZJo6LWAOWbAo7RugqkkS
+#пример работы игры "Арифметическая прогрессия"
