@@ -12,3 +12,6 @@ https://asciinema.org/a/8AvkkouXMFPpmBC5lf4KHIUb9
 
 https://asciinema.org/a/aGQxDZJo6LWAOWbAo7RugqkkS
 #пример работы игры "Арифметическая прогрессия"
+
+https://asciinema.org/a/Wytdg6FWnkIbx6XpntaiJkqSV
+#пример работы игры "Простое ли число?"
