@@ -3,8 +3,9 @@ package hexlet.code;
 public class Engine {
 
     public static String userName;
-    public static String wrongAnswer = " is wrong answer ;(. Correct answer was ";
-    public static  String wrongAnswer2srting = "Let's try again, ";
+    public static final String wrongAnswer = " is wrong answer ;(. Correct answer was ";
+    public static  final String wrongAnswer2srting = "Let's try again, ";
+    public static int raunds = 0;
     Engine(String userName) {
         this.userName = userName;
     }
