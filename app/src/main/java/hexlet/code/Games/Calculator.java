@@ -1,4 +1,6 @@
 package hexlet.code.Games;
+import hexlet.code.Engine;
+
 import java.util.Random;
 //import java.lang.Integer;
 import java.util.Scanner;
@@ -11,8 +13,6 @@ public class Calculator {
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
         System.out.println("What is the result of the expression?");
-        String wrongAnswer = " is wrong answer ;(. Correct answer was ";
-        String wrongAnswer2srting = "Let's try again, ";
         String[] operators = {"+", "-", "*"};
         int result = 0;
 
@@ -45,12 +45,12 @@ public class Calculator {
             if (result == Integer.parseInt(answer1)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println(answer1 + wrongAnswer + result);
-                System.out.println(wrongAnswer2srting + userName);
+                System.out.println(answer1 + Engine.wrongAnswer + result);
+                System.out.println(Engine.wrongAnswer2srting + userName);
                 break;
             }
-            System.out.println("Congratulations, " + userName + "!");
-        }
 
+        }
+        System.out.println("Congratulations, " + userName + "!");
     }
 }

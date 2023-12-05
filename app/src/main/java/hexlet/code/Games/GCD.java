@@ -40,8 +40,8 @@ public class GCD {
                 System.out.println(Engine.wrongAnswer2srting + userName);
                 break;
             }
-            
-            System.out.println("Congratulations, " + userName + "!");
+
         }
+        System.out.println("Congratulations, " + userName + "!");
     }
 }
