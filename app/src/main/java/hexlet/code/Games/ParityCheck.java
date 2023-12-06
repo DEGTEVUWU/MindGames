@@ -10,15 +10,6 @@ public class ParityCheck {
         Scanner scanner = new Scanner(System.in);
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
-        /*
-        System.out.println("");
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        Scanner scanner = new Scanner(System.in);
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
-
-         */
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
@@ -28,38 +19,38 @@ public class ParityCheck {
             System.out.println("Question: " + number);
             System.out.print("Your answer: ");
             Scanner scanner1 = new Scanner(System.in);
-            String answer1 = scanner1.next();
+            String answer = scanner1.next();
 
 
-            //String wrongAnswer = " is wrong answer ;(. Correct answer was ";
-            //String wrongAnswer2srting = "Let's try again, ";
-
-            if (number % 2 == 0 && answer1.equals("yes")) {
+            if (number % 2 == 0 && answer.equals("yes")) {
                 System.out.println("Correct!");
-            } else if (number % 2 == 1 && answer1.equals("no")) {
+            } else if (number % 2 == 1 && answer.equals("no")) {
                 System.out.println("Correct!");
-            } else if (number % 2 == 0 && answer1.equals("no")) {
-                System.out.println(answer1 + Engine.wrongAnswer + "'yes'.");
+            } else if (number % 2 == 0 && answer.equals("no")) {
+                System.out.println(answer + Engine.wrongAnswer + "'yes'.");
                 System.out.println(Engine.wrongAnswer2srting + userName);
                 break;
-            } else if (number % 2 == 1 && answer1.equals("yes")) {
-                System.out.println(answer1 + Engine.wrongAnswer + "'no'.");
+            } else if (number % 2 == 1 && answer.equals("yes")) {
+                System.out.println(answer + Engine.wrongAnswer + "'no'.");
                 System.out.println(Engine.wrongAnswer2srting + userName);
                 break;
             } else {
                 if (number % 2 == 0) {
-                    System.out.println("'" + answer1 + "'" + Engine.wrongAnswer + "'yes'.");
+                    System.out.println("'" + answer + "'" + Engine.wrongAnswer + "'yes'.");
                     System.out.println(Engine.wrongAnswer2srting + userName);
                     break;
                 }
                 if (number % 2 == 1) {
-                    System.out.println("'" + answer1 + "'" + Engine.wrongAnswer + "'no'.");
+                    System.out.println("'" + answer + "'" + Engine.wrongAnswer + "'no'.");
                     System.out.println(Engine.wrongAnswer2srting + userName);
                     break;
                 }
             }
-            System.out.println("Congratulations, " + userName + "!");
+            Engine.raunds++;
         }
+        if (Engine.raunds == 3) {
+            System.out.println("Congratulations, " + userName + "!");
 
+        }
     }
 }

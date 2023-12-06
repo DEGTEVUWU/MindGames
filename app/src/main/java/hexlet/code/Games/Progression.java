@@ -50,8 +50,11 @@ public class Progression {
                 System.out.println(Engine.wrongAnswer2srting + userName);
                 break;
             }
+            Engine.raunds++;
         }
-        System.out.println("Congratulations, " + userName + "!");
+        if (Engine.raunds == 3) {
+            System.out.println("Congratulations, " + userName + "!");
+        }
     }
 }
 

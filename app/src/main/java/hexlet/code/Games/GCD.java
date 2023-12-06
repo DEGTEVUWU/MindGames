@@ -12,7 +12,7 @@ public class GCD {
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
         System.out.println("Find the greatest common divisor of given numbers.");
-        int result = 0;
+        int sum = 0;
 
         for (var i = 0; i < 3; i++) {
             Random random = new Random();
@@ -24,24 +24,29 @@ public class GCD {
 
             System.out.print("Your answer: ");
             Scanner scanner1 = new Scanner(System.in);
-            String answer1 = scanner1.next();
+            String answer = scanner1.next();
+
 
 
             for (int y = 1; y <= value1 && y <= value2; y++) {
                 if (value1 % y == 0 && value2 % y == 0) {
-                    result = y;
+                    sum = y;
                 }
             }
 
-            if (result == Integer.parseInt(answer1)) {
+            String result = Integer.toString(sum);
+
+            if (answer.equals(result)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println(answer1 + Engine.wrongAnswer + result);
+                System.out.println(answer + Engine.wrongAnswer + result);
                 System.out.println(Engine.wrongAnswer2srting + userName);
                 break;
             }
-
+            Engine.raunds++;
         }
-        System.out.println("Congratulations, " + userName + "!");
+        if (Engine.raunds == 3) {
+            System.out.println("Congratulations, " + userName + "!");
+        }
     }
 }
