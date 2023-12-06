@@ -1,8 +1,6 @@
 package hexlet.code.Games;
 
 import hexlet.code.Engine;
-
-import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,7 +12,6 @@ public class Prime {
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        
         for (var i = 0; i < 3; i++) {
             Random random = new Random();
             int value1 = random.nextInt(600);
@@ -38,8 +35,8 @@ public class Prime {
             if (answer.equals(result)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println(answer + Engine.wrongAnswer + result);
-                System.out.println(Engine.wrongAnswer2srting + userName);
+                System.out.println(answer + Engine.wrong + result);
+                System.out.println(Engine.wrong2 + userName);
                 break;
             }
             Engine.raunds++;

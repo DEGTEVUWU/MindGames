@@ -1,5 +1,9 @@
 package hexlet.code;
-import hexlet.code.Games.*;
+import hexlet.code.Games.ParityCheck;
+import hexlet.code.Games.Calculator;
+import hexlet.code.Games.GCD;
+import hexlet.code.Games.Progression;
+import hexlet.code.Games.Prime;
 
 import java.util.Scanner;
 public class App {

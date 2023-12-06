@@ -47,8 +47,8 @@ public class Calculator {
             if (answer.equals(result)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println(answer + Engine.wrongAnswer + result);
-                System.out.println(Engine.wrongAnswer2srting + userName);
+                System.out.println(answer + Engine.wrong + result);
+                System.out.println(Engine.wrong2 + userName);
                 break;
             }
             Engine.raunds++;
