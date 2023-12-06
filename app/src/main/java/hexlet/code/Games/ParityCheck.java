@@ -26,26 +26,16 @@ public class ParityCheck {
                 System.out.println("Correct!");
             } else if (number % 2 == 1 && answer.equals("no")) {
                 System.out.println("Correct!");
-            } else if (number % 2 == 0 && answer.equals("no")) {
+            } else if (number % 2 == 0 && !(answer.equals("yes"))) {
                 System.out.println(answer + Engine.wrongAnswer + "'yes'.");
                 System.out.println(Engine.wrongAnswer2srting + userName);
                 break;
-            } else if (number % 2 == 1 && answer.equals("yes")) {
+            } else if (number % 2 == 1 && !(answer.equals("no"))) {
                 System.out.println(answer + Engine.wrongAnswer + "'no'.");
                 System.out.println(Engine.wrongAnswer2srting + userName);
                 break;
-            } else {
-                if (number % 2 == 0) {
-                    System.out.println("'" + answer + "'" + Engine.wrongAnswer + "'yes'.");
-                    System.out.println(Engine.wrongAnswer2srting + userName);
-                    break;
-                }
-                if (number % 2 == 1) {
-                    System.out.println("'" + answer + "'" + Engine.wrongAnswer + "'no'.");
-                    System.out.println(Engine.wrongAnswer2srting + userName);
-                    break;
-                }
             }
+
             Engine.raunds++;
         }
         if (Engine.raunds == 3) {
