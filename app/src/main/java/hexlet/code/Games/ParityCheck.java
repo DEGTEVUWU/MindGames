@@ -1,7 +1,6 @@
 package hexlet.code.Games;
 import java.util.Random;
 import java.util.Scanner;
-
 import hexlet.code.Engine;
 
 public class ParityCheck {
@@ -21,17 +20,16 @@ public class ParityCheck {
             Scanner scanner1 = new Scanner(System.in);
             String answer = scanner1.next();
 
-
-            if (number % 2 == 0 && answer.equals("yes")) {
+            String result = new String();
+            if (number % 2 == 0) {
+                result = "yes";
+            } else {
+                result = "no";
+            }
+            if (answer.equals(result)) {
                 System.out.println("Correct!");
-            } else if (number % 2 == 1 && answer.equals("no")) {
-                System.out.println("Correct!");
-            } else if (number % 2 == 0 && !(answer.equals("yes"))) {
-                System.out.println(answer + Engine.wrong + "'yes'.");
-                System.out.println(Engine.wrong2 + userName);
-                break;
-            } else if (number % 2 == 1 && !(answer.equals("no"))) {
-                System.out.println(answer + Engine.wrong + "'no'.");
+            } else {
+                System.out.println("'" + answer + "'" + Engine.wrong + "'" + result + "'");
                 System.out.println(Engine.wrong2 + userName);
                 break;
             }

@@ -15,15 +15,14 @@ public class Prime {
         for (var i = 0; i < 3; i++) {
             Random random = new Random();
             int value1 = random.nextInt(600);
-            int index = 0;
 
             for (var y = 1; y < value1 / 2; y++) {
                 if (value1 % y == 0) {
-                    index += 1;
+                    Engine.index += 1;
                 }
             }
             String result = "yes";
-            if (index > 2) {
+            if (Engine.index > 2) {
                 result = "no";
             }
 

@@ -38,10 +38,5 @@ public class App {
         if (userChoice.equals("6")) {
             Prime.prime();
         }
-
-
-
-
-
     }
 }

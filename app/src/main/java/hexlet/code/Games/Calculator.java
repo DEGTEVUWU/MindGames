@@ -14,7 +14,7 @@ public class Calculator {
         System.out.println("Hello, " + userName + "!");
         System.out.println("What is the result of the expression?");
         String[] operators = {"+", "-", "*"};
-        int sum = 0;
+
 
         for (var i = 0; i < 3; i++) {
             Random random = new Random();
@@ -26,13 +26,13 @@ public class Calculator {
 
             switch (operators[indexOperators]) {
                 case "+":
-                    sum = value1 + value2;
+                    Engine.sum = value1 + value2;
                     break;
                 case "-":
-                    sum = value1 - value2;
+                    Engine.sum = value1 - value2;
                     break;
                 case "*":
-                    sum = value1 * value2;
+                    Engine.sum = value1 * value2;
                     break;
                 default:
                     break;
@@ -42,7 +42,7 @@ public class Calculator {
             Scanner scanner1 = new Scanner(System.in);
             String answer = scanner1.next();
 
-            String result = Integer.toString(sum);
+            String result = Integer.toString(Engine.sum);
 
             if (answer.equals(result)) {
                 System.out.println("Correct!");
