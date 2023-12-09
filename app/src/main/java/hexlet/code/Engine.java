@@ -1,7 +1,6 @@
 package hexlet.code;
 import java.util.Random;
 import java.util.Scanner;
-
 import hexlet.code.Games.GCD;
 import hexlet.code.Games.Prime;
 import hexlet.code.Games.ParityCheck;
