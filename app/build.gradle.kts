@@ -29,6 +29,7 @@ dependencies {
 }
 
 tasks.test {
+    finalizedBy(tasks.jacocoTestReport)
     useJUnitPlatform()
     // https://technology.lastminute.com/junit5-kotlin-and-gradle-dsl/
     testLogging {
@@ -40,6 +41,4 @@ tasks.test {
     }
 }
 
-tasks.jacocoTestReport {
-    reports { xml.required.set(true) }
-}
+tasks.jacocoTestReport { reports { xml.required.set(true) } }
