@@ -26,7 +26,7 @@ public class App {
                 Cli.console();
                 break;
             case "2", "3", "4", "5", "6":
-                Engine.comunication();
+                Engine.communication();
                 break;
             default:
                 break;

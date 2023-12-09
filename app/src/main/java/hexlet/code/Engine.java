@@ -22,7 +22,7 @@ public class Engine {
     public static String wrong2 = "Let's try again, ";
     public static int rounds;
 
-    public static void comunication() {
+    public static void communication() {
 
         String choice = ch.getChoice();
 
