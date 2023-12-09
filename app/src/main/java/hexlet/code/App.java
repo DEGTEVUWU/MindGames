@@ -1,14 +1,13 @@
 package hexlet.code;
-import hexlet.code.Games.ParityCheck;
-import hexlet.code.Games.Calculator;
-import hexlet.code.Games.GCD;
-import hexlet.code.Games.Progression;
-import hexlet.code.Games.Prime;
-
 import java.util.Scanner;
 public class App {
+    static Scanner scanner = new Scanner(System.in);
+    public static String choice;
+
+    public String getChoice() {
+        return this.choice;
+    }
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -19,10 +18,21 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
-        String userChoice = scan.next();
-        if (userChoice.equals("1")) {
-            Cli.console();
+
+        choice = scanner.next();
+
+        switch (choice) {
+            case "1":
+                Cli.console();
+                break;
+            case "2", "3", "4", "5", "6":
+                Engine.comunication();
+                break;
+            default:
+                break;
         }
+        /*
+
         if (userChoice.equals("2")) {
             ParityCheck.check();
         }
@@ -38,5 +48,7 @@ public class App {
         if (userChoice.equals("6")) {
             Prime.prime();
         }
+
+         */
     }
 }

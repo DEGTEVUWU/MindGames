@@ -1,11 +1,52 @@
 package hexlet.code.Games;
 import hexlet.code.Engine;
-
 import java.util.Random;
-//import java.lang.Integer;
-import java.util.Scanner;
+
 public class Calculator {
+    public static int value1;
+    public static int value2;
+    public static int indexOperators;
+    public int getValue1() {
+        return this.value1;
+    }
+    public int getValue2() {
+        return this.value1;
+    }
+    public int getIndexOperators() {
+        return this.value1;
+    }
+
+    public static String greeting = "What is the result of the expression?";
+
+    public static String question() {
+        Random rnd = new Random(System.currentTimeMillis());
+        value1 = rnd.nextInt(200);
+        value2 = rnd.nextInt(200);
+        indexOperators = rnd.nextInt(3);
+        String[] operators = {"+", "-", "*"};
+        return value1 + " " + operators[indexOperators] + " " + value2;
+    }
+
+    public static int result() {
+
+        if (indexOperators == 0) {
+            Engine.sum = value1 + value2;
+        }
+        if (indexOperators == 1) {
+            Engine.sum = value1 - value2;
+        }
+        if (indexOperators == 2) {
+            Engine.sum = value1 * value2;
+        }
+        return Engine.sum;
+
+    }
+
+
+
+
     public static void calculate() {
+        /*
         System.out.println("");
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -16,7 +57,9 @@ public class Calculator {
         String[] operators = {"+", "-", "*"};
 
 
-        for (var i = 0; i < 3; i++) {
+         */
+
+        /*for (var i = 0; i < 3; i++) {
             Random random = new Random();
             int indexOperators = random.nextInt(2);
             int value1 = random.nextInt(200);
@@ -24,6 +67,9 @@ public class Calculator {
             String term = value1 + " " + operators[indexOperators] + " " + value2;
             System.out.println("Question: " + term);
 
+
+         */
+        /*
             switch (operators[indexOperators]) {
                 case "+":
                     Engine.sum = value1 + value2;
@@ -56,5 +102,7 @@ public class Calculator {
         if (Engine.raunds == 3) {
             System.out.println("Congratulations, " + userName + "!");
         }
+
+         */
     }
 }

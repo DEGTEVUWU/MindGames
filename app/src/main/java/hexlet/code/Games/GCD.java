@@ -1,13 +1,58 @@
 package hexlet.code.Games;
-
-import hexlet.code.Engine;
-
-//import java.util.Random;
-//import java.util.Scanner;
+import java.util.Random;
 
 public class GCD {
-    public static void divide() {
-        Engine.comunication();
+    public static int value1;
+    public static int value2;
+    public static String term;
+
+    public int getValue1() {
+        return this.value1;
+
+    }
+    public int getValue2() {
+
+        return this.value2;
+    }
+    public static String greeting = "Find the greatest common divisor of given numbers.";
+
+    public static String question() {
+        Random rnd = new Random(System.currentTimeMillis());
+        value1 = rnd.nextInt(200);
+        value2 = rnd.nextInt(200);
+        term = value1 + " " + value2;
+        return term;
+
+
+         /*
+         value1 = Engine.random.nextInt(200);
+         value2 = Engine.random.nextInt(200);
+         String term = value1 + " " + value2;
+         return term;
+
+          */
+    }
+
+    public static int result() {
+
+        //Random random = new Random();
+        //value1 = Engine.random.nextInt(200);
+        //value2 = Engine.random.nextInt(200);
+
+
+        while (value1 != 0 && value2 != 0) {
+            if (value1 > value2) {
+                value1 = value1 % value2;
+            } else {
+                value2 = value2 % value1;
+            }
+        }
+        return value1 + value2;
+    }
+
+
+
+        /*Engine.comunication();
         Engine.userName = Engine.scanner.next();
         System.out.println("Hello, " + Engine.userName + "!");
         System.out.println("Find the greatest common divisor of given numbers.");
@@ -45,4 +90,6 @@ public class GCD {
             System.out.println("Congratulations, " + Engine.userName + "!");
         }
     }
+*/
 }
+

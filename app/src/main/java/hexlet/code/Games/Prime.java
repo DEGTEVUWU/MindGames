@@ -1,11 +1,41 @@
 package hexlet.code.Games;
-
-import hexlet.code.Engine;
 import java.util.Random;
-import java.util.Scanner;
-
 public class Prime {
+    public static int value1;
+    public static String result = "yes";
+
+    public int getValue1() {
+        return this.value1;
+    }
+    public String getResult() {
+        return this.result;
+    }
+
+    public static String greeting = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+
+    public static int question() {
+        Random rnd = new Random(System.currentTimeMillis());
+        value1 = rnd.nextInt(600);
+        return value1;
+    }
+
+    public static String result() {
+        int index = 0;
+        for (var y = 1; y <= value1; y++) {
+            if (value1 % y == 0) {
+                index += 1;
+            }
+        }
+        if (index > 2) {
+            result = "no";
+        }
+        return result;
+    }
+
     public static void prime() {
+
+
+        /*
         Engine.comunication();
 
         Scanner scanner = new Scanner(System.in);
@@ -43,5 +73,7 @@ public class Prime {
         if (Engine.raunds == 3) {
             System.out.println("Congratulations, " + userName + "!");
         }
+
+         */
     }
 }

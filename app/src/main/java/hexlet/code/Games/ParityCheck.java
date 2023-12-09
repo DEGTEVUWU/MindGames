@@ -1,27 +1,44 @@
 package hexlet.code.Games;
 import java.util.Random;
-import java.util.Scanner;
-import hexlet.code.Engine;
+//import java.util.Scanner;
+//import hexlet.code.Engine;
 
 public class ParityCheck {
+    public static String greeting = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
+    public static int question() {
+        Random rnd = new Random(System.currentTimeMillis());
+        return rnd.nextInt(200);
+    }
+
+    public static String result() {
+        String result;
+        if (question() % 2 == 0) {
+            result = "yes";
+        } else {
+            result = "no";
+        }
+        return result;
+    }
     public static void check() {
-        Engine.comunication();
-        Scanner scanner = new Scanner(System.in);
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
+        //Engine.comunication();
+        //Scanner scanner = new Scanner(System.in);
+        //String userName = scanner.next();
+        //System.out.println("Hello, " + userName + "!");
 
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        //System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-        for (var i = 0; i < 3; i++) {
-            Random rnd = new Random(System.currentTimeMillis());
-            int number = rnd.nextInt(200);
-            System.out.println("Question: " + number);
-            System.out.print("Your answer: ");
-            Scanner scanner1 = new Scanner(System.in);
-            String answer = scanner1.next();
+        //for (var i = 0; i < 3; i++) {
+            //Random rnd = new Random(System.currentTimeMillis());
+            //int number = rnd.nextInt(200);
+            //System.out.println("Question: " + term());
+            //System.out.print("Your answer: ");
+            //Scanner scanner1 = new Scanner(System.in);
+            //String answer = scanner1.next();
 
+        /*
             String result = new String();
-            if (number % 2 == 0) {
+            if (question() % 2 == 0) {
                 result = "yes";
             } else {
                 result = "no";
@@ -40,5 +57,9 @@ public class ParityCheck {
             System.out.println("Congratulations, " + userName + "!");
 
         }
+
+         */
     }
+
+
 }
