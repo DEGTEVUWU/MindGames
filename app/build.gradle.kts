@@ -3,11 +3,11 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
     application
-    jacoco
+    //jacoco
     id("checkstyle")
-    id("io.freefair.lombok") version "8.4"
+    //id("io.freefair.lombok") version "8.4"
     id("com.github.ben-manes.versions") version "0.50.0"
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    //id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = "hexlet.code"
@@ -29,7 +29,7 @@ dependencies {
 }
 
 tasks.test {
-    finalizedBy(tasks.jacocoTestReport)
+    //finalizedBy(tasks.jacocoTestReport)
     useJUnitPlatform()
     // https://technology.lastminute.com/junit5-kotlin-and-gradle-dsl/
     testLogging {
@@ -41,4 +41,4 @@ tasks.test {
     }
 }
 
-tasks.jacocoTestReport { reports { xml.required.set(true) } }
+//tasks.jacocoTestReport { reports { xml.required.set(true) } }
