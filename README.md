@@ -3,8 +3,6 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/b8b63b3985750b7fe6c4/maintainability)](https://codeclimate.com/github/DEGTEVUWU/java-project-61/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/b8b63b3985750b7fe6c4/test_coverage)](https://codeclimate.com/github/DEGTEVUWU/java-project-61/test_coverage) 
-
 https://asciinema.org/a/klMx3ELDJMqnpeb26hbZvdQqX 
 #пример работы игры "Проверка на четность"
 
