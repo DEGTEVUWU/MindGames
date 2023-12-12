@@ -1,5 +1,7 @@
 package hexlet.code.Games;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
+
 import java.util.Random;
 
 public class Calculator {
@@ -16,13 +18,13 @@ public class Calculator {
         return this.value1;
     }
 
-    public static String greeting = "What is the result of the expression?";
+    public static final String DESCRIPTION  = "What is the result of the expression?";
 
     public static String question() {
-        Random rnd = new Random(System.currentTimeMillis());
-        value1 = rnd.nextInt(200);
-        value2 = rnd.nextInt(200);
-        indexOperators = rnd.nextInt(3);
+        //Random rnd = new Random(System.currentTimeMillis());
+        value1 = Utils.generateNumber(1, 200); //rnd.nextInt(200);
+        value2 = Utils.generateNumber(1, 200); //rnd.nextInt(200);
+        indexOperators = Utils.generateNumber(0, 2);//rnd.nextInt(3);
         String[] operators = {"+", "-", "*"};
         return value1 + " " + operators[indexOperators] + " " + value2;
     }

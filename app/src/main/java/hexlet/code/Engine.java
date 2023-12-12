@@ -7,6 +7,7 @@ import hexlet.code.Games.ParityCheck;
 import hexlet.code.Games.Progression;
 import hexlet.code.Games.Calculator;
 public class Engine {
+    public static final int ROUNDS = 3;
     public static App ch = new App();
     public static String question;
     public static String result;
@@ -34,27 +35,27 @@ public class Engine {
 
         for (var i = 0; i < 3; i++) {
             if (choice.equals("2")) {
-                greeting = ParityCheck.greeting;
+                greeting = ParityCheck.DESCRIPTION ;
                 question = Integer.toString(ParityCheck.question());
                 result = ParityCheck.result();
             }
             if (choice.equals("3")) {
-                greeting = Calculator.greeting;
+                greeting = Calculator.DESCRIPTION ;
                 question = Calculator.question();
                 result = Integer.toString(Calculator.result());
             }
             if (choice.equals("4")) {
-                greeting = GCD.greeting;
+                greeting = GCD.DESCRIPTION ;
                 question = GCD.question();
                 result = Integer.toString(GCD.result());
             }
             if (App.choice.equals("5")) {
-                greeting = Progression.greeting;
+                greeting = Progression.DESCRIPTION ;
                 question = Progression.question();
                 result = Progression.result();
             }
             if (App.choice.equals("6")) {
-                greeting = Prime.greeting;
+                greeting = Prime.DESCRIPTION ;
                 question = Integer.toString(Prime.question());
                 result = Prime.result();
             }

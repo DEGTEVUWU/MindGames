@@ -1,8 +1,11 @@
 package hexlet.code.Games;
+import hexlet.code.Utils;
+
 import java.util.Random;
 public class Prime {
     public static int value1;
-    public static String result = "yes";
+    public static String result;
+    public static int index;
 
     public int getValue1() {
         return this.value1;
@@ -10,21 +13,27 @@ public class Prime {
     public String getResult() {
         return this.result;
     }
+    public  int getIndex() {
+        return this.index;
+    }
 
-    public static String greeting = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    public static String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static int question() {
-        Random rnd = new Random(System.currentTimeMillis());
-        value1 = rnd.nextInt(600);
+         //Random rnd = new Random(System.currentTimeMillis());
+        value1 = Utils.generateNumber(1, 600); //rnd.nextInt(600);
         return value1;
     }
 
     public static String result() {
-        int index = 0;
+        index = 0;
         for (var y = 1; y <= value1; y++) {
             if (value1 % y == 0) {
                 index += 1;
             }
+        }
+        if (index <= 2) {
+            result = "yes";
         }
         if (index > 2) {
             result = "no";

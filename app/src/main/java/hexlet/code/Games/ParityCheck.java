@@ -1,19 +1,26 @@
 package hexlet.code.Games;
+import hexlet.code.Utils;
+
 import java.util.Random;
 //import java.util.Scanner;
 //import hexlet.code.Engine;
 
 public class ParityCheck {
-    public static String greeting = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+public static int value1;
+public int getValue1() {
+    return this.value1;
+}
+    public static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static int question() {
-        Random rnd = new Random(System.currentTimeMillis());
-        return rnd.nextInt(200);
+        value1 = Utils.generateNumber(1, 200);
+        //Random rnd = new Random(System.currentTimeMillis());
+        return value1; //rnd.nextInt(200);
     }
 
     public static String result() {
         String result;
-        if (question() % 2 == 0) {
+        if (value1 % 2 == 0) {
             result = "yes";
         } else {
             result = "no";

@@ -14,7 +14,7 @@ public class GCD {
 
         return this.value2;
     }
-    public static String greeting = "Find the greatest common divisor of given numbers.";
+    public static final String DESCRIPTION  = "Find the greatest common divisor of given numbers.";
 
     public static String question() {
         Random rnd = new Random(System.currentTimeMillis());

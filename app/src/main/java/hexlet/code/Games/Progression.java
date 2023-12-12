@@ -4,20 +4,21 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Progression {
-    public static int value1;
-    public static int value2;
+    public static int first;
+    public static int step;
     public static int length;
     public static int swap;
     //public static int[] progression;
     public static String result;
     public static String[] term;
     public static String termClean;
-    public static String greeting = "What number is missing in the progression?";
+    public static String answer;
+    public static final String DESCRIPTION  = "What number is missing in the progression?";
     public int getValue1() {
-        return this.value1;
+        return this.first;
     }
     public int getValue2() {
-        return this.value2;
+        return this.step;
     }
     public int getLength() {
         return this.length;
@@ -31,36 +32,57 @@ public class Progression {
     public String getResult() {
         return this.result;
     }
+    public String getAnswer() {
+        return  this.answer;
+    }
+    public static String[] makeProgression(int first, int step, int length) {
+        int[] progression = new int[length];
+        int index = first;
+        for (var y = 0; y < length; y++) {
+            progression[y] = index;
+            index += step;
+        }
+        term = Arrays.stream(progression).mapToObj(Integer::toString).toArray(String[]::new);
+        return term;
+    }
     public static String question() {
         Random rnd = new Random(System.currentTimeMillis());
-        value1 = rnd.nextInt(200);
-        value2 = rnd.nextInt(21);
+        first = rnd.nextInt(200);
+        step = rnd.nextInt(21);
         length = rnd.nextInt(5, 10);
         swap = rnd.nextInt(1, length);
 
-        int[] progression = new int[length];
-        int index = value1;
-        for (var y = 0; y < length; y++) {
-            progression[y] = index;
-            index += value2;
-        }
-        term = Arrays.stream(progression).mapToObj(Integer::toString).toArray(String[]::new);
-        term[swap] = "..";
-        termClean = Arrays.toString(term).replace("[", "").replace("]", "").replace(",", "");
+        //int[] progression = new int[length];
+        //int index = value1;
+        //for (var y = 0; y < length; y++) {
+        //    progression[y] = index;
+        //    index += value2;
+        //}
+        //term = Arrays.stream(progression).mapToObj(Integer::toString).toArray(String[]::new);
+        String[] progression = makeProgression(first, step, length);
+        answer = progression[swap];
+        progression[swap] = "..";
+        String question = String.join(" ", progression);
+        //term[swap] = "..";
+        //termClean = Arrays.toString(term).replace("[", "").replace("]", "").replace(",", "");
         //term[swap] = "..";
 
-        return termClean;
+        return question;
 
     }
     public static String result() {
+        return  answer;
+        /*
         int[] progression = new int[length];
-        int index = value1;
+        int index = first;
         for (var y = 0; y < length; y++) {
             progression[y] = index;
-            index += value2;
+            index += step;
         }
         result = Integer.toString(progression[swap]);
         return result;
+
+         */
     }
 
     public static void progression() {
