@@ -14,17 +14,17 @@ make run-dist
 
 ## Примеры работы каждой игры: ##
 
-> https://asciinema.org/a/klMx3ELDJMqnpeb26hbZvdQqX 
+> https://asciinema.org/a/klMx3ELDJMqnpeb26hbZvdQqX   
 **"Проверка на четность"**
 
-> https://asciinema.org/a/2QZlNeXXHgHD0ngortEwRfQy1 
+> https://asciinema.org/a/2QZlNeXXHgHD0ngortEwRfQy1   
 **"Калькулятор"**
 
-> https://asciinema.org/a/COZWmjo1j2REFYinm13diQLAQ
+> https://asciinema.org/a/COZWmjo1j2REFYinm13diQLAQ  
 **"Наибольший общий делитель"**
 
-> https://asciinema.org/a/jqrM4riMSAHPZT4a0ZWxhxZK4
+> https://asciinema.org/a/jqrM4riMSAHPZT4a0ZWxhxZK4  
 **"Арифметическая прогрессия"**
 
-> https://asciinema.org/a/qKQHNyOlUF8NrvbqzSaRAVYNz
+> https://asciinema.org/a/qKQHNyOlUF8NrvbqzSaRAVYNz  
 **"Простое ли число?"**
