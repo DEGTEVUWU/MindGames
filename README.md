@@ -38,7 +38,7 @@ make run-dist
 #### Description in English :sunglasses::blue_heart: #### ---->
 ---
 
-Hello everyone!
+Hello everyone!  
 This is my first project on GitHub during my Hexlet training.
 
 # **Brain game!** #
