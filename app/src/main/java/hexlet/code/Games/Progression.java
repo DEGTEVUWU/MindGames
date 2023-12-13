@@ -1,17 +1,16 @@
 package hexlet.code.Games;
-
+import hexlet.code.Engine;
+import hexlet.code.Utils;
 import java.util.Arrays;
-import java.util.Random;
+
 
 public class Progression {
     public static int first;
     public static int step;
     public static int length;
     public static int swap;
-    //public static int[] progression;
     public static String result;
     public static String[] term;
-    public static String termClean;
     public static String answer;
     public static final String DESCRIPTION  = "What number is missing in the progression?";
     public int getValue1() {
@@ -26,9 +25,6 @@ public class Progression {
     public int getSwap() {
         return this.swap;
     }
-    //public int[] getProgression() {
-    //    return this.progression;
-    //}
     public String getResult() {
         return this.result;
     }
@@ -46,11 +42,11 @@ public class Progression {
         return term;
     }
     public static String question() {
-        Random rnd = new Random(System.currentTimeMillis());
-        first = rnd.nextInt(200);
-        step = rnd.nextInt(21);
-        length = rnd.nextInt(5, 10);
-        swap = rnd.nextInt(1, length);
+        //Random rnd = new Random(System.currentTimeMillis());
+        first = Utils.generateNumber(1, 200);
+        step = Utils.generateNumber(1, 21);
+        length = Utils.generateNumber(5, 10);
+        swap = Utils.generateNumber(1, length - 1);
 
         //int[] progression = new int[length];
         //int index = value1;
@@ -86,7 +82,15 @@ public class Progression {
     }
 
     public static void progression() {
-
+        String[] question = new String[Engine.ROUNDS];
+        String[] result = new String[Engine.ROUNDS];
+        int index = 0;
+        while(index < Engine.ROUNDS) {
+            question[index] = question();
+            result[index] = result();
+            index++;
+        }
+        Engine.communication(DESCRIPTION, question, result);
     }
         /*
         Engine.comunication();

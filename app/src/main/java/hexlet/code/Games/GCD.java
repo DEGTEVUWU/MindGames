@@ -1,28 +1,24 @@
 package hexlet.code.Games;
-import java.util.Random;
-
+import hexlet.code.Engine;
+import hexlet.code.Utils;
 public class GCD {
     public static int value1;
     public static int value2;
     public static String term;
-
     public int getValue1() {
         return this.value1;
-
     }
     public int getValue2() {
-
         return this.value2;
     }
     public static final String DESCRIPTION  = "Find the greatest common divisor of given numbers.";
 
     public static String question() {
-        Random rnd = new Random(System.currentTimeMillis());
-        value1 = rnd.nextInt(200);
-        value2 = rnd.nextInt(200);
+        //Random rnd = new Random(System.currentTimeMillis());
+        value1 = Utils.generateNumber(1, 200);
+        value2 = Utils.generateNumber(1, 200);
         term = value1 + " " + value2;
         return term;
-
 
          /*
          value1 = Engine.random.nextInt(200);
@@ -50,6 +46,17 @@ public class GCD {
         return value1 + value2;
     }
 
+    public static void gcd () {
+        String[] question = new String[Engine.ROUNDS];
+        String[] result = new String[Engine.ROUNDS];
+        int index = 0;
+        while(index < Engine.ROUNDS) {
+            question[index] = question();
+            result[index] = String.valueOf(result());
+            index++;
+        }
+        Engine.communication(DESCRIPTION, question, result);
+    }
 
 
         /*Engine.comunication();

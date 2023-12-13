@@ -1,4 +1,6 @@
 package hexlet.code;
+import hexlet.code.Games.*;
+
 import java.util.Scanner;
 public class App {
     static Scanner scanner = new Scanner(System.in);
@@ -20,7 +22,47 @@ public class App {
         System.out.print("Your choice: ");
 
         choice = scanner.next();
+        //scanner.close();
 
+        /*switch (choice) {
+            case "1":
+                Cli.console();
+            case "2":
+                ParityCheck.check();
+            case "3":
+                Calculator.calculate();
+            case "4":
+                GCD.gcd();
+            case "5":
+                Progression.progression();
+            case "6":
+                Prime.prime();
+            default:
+                break;
+
+
+         */
+        if (choice.equals("1")) {
+            Cli.console();
+        }
+        if (choice.equals("2")) {
+            ParityCheck.check();
+        }
+        if (choice.equals("3")) {
+            Calculator.calculate();
+        }
+        if (choice.equals("4")) {
+            GCD.gcd();
+        }
+        if (choice.equals("5")) {
+            Progression.progression();
+        }
+        if (choice.equals("6")) {
+            Prime.prime();
+        }
+
+        }
+        /*
         switch (choice) {
             case "1":
                 Cli.console();
@@ -31,6 +73,8 @@ public class App {
             default:
                 break;
         }
+
+         */
         /*
 
         if (userChoice.equals("2")) {
@@ -50,5 +94,4 @@ public class App {
         }
 
          */
-    }
 }

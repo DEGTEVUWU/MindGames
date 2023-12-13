@@ -2,8 +2,6 @@ package hexlet.code.Games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Random;
-
 public class Calculator {
     public static int value1;
     public static int value2;
@@ -17,7 +15,6 @@ public class Calculator {
     public int getIndexOperators() {
         return this.value1;
     }
-
     public static final String DESCRIPTION  = "What is the result of the expression?";
 
     public static String question() {
@@ -44,10 +41,17 @@ public class Calculator {
 
     }
 
-
-
-
     public static void calculate() {
+        String[] question = new String[Engine.ROUNDS];
+        String[] result = new String[Engine.ROUNDS];
+        int index = 0;
+        while(index < Engine.ROUNDS) {
+            question[index] = question();
+            result[index] = String.valueOf(result());
+            index++;
+        }
+        Engine.communication(DESCRIPTION, question, result);
+
         /*
         System.out.println("");
         System.out.println("Welcome to the Brain Games!");

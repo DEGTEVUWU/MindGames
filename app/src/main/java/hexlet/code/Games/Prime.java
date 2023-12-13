@@ -1,7 +1,6 @@
 package hexlet.code.Games;
+import hexlet.code.Engine;
 import hexlet.code.Utils;
-
-import java.util.Random;
 public class Prime {
     public static int value1;
     public static String result;
@@ -42,7 +41,16 @@ public class Prime {
     }
 
     public static void prime() {
-
+        String[] question = new String[Engine.ROUNDS];
+        String[] result = new String[Engine.ROUNDS];
+        int index = 0;
+        while(index < Engine.ROUNDS) {
+            question[index] = String.valueOf(question());
+            result[index] = result();
+            index++;
+        }
+        Engine.communication(DESCRIPTION, question, result);
+    }
 
         /*
         Engine.comunication();
@@ -84,5 +92,4 @@ public class Prime {
         }
 
          */
-    }
 }

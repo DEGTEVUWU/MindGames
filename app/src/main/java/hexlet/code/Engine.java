@@ -23,7 +23,7 @@ public class Engine {
     public static String wrong2 = "Let's try again, ";
     public static int rounds;
 
-    public static void communication() {
+    public static void communication(String DESCRIPTION, String[] question, String[] result) {
 
         String choice = ch.getChoice();
 
@@ -33,6 +33,7 @@ public class Engine {
         userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
 
+        /*
         for (var i = 0; i < 3; i++) {
             if (choice.equals("2")) {
                 greeting = ParityCheck.DESCRIPTION ;
@@ -63,23 +64,30 @@ public class Engine {
                 System.out.println(greeting);
             }
 
-            System.out.println("Question: " + question);
+         */
+        while (rounds < Engine.ROUNDS){
+            if (rounds == 0) {
+                System.out.println(DESCRIPTION);
+            }
+
+            System.out.println("Question: " + question[rounds]);
             System.out.print("Your answer: ");
             String answer = scanner.next();
 
-            if (answer.equals(result)) {
+            if (answer.equals(result[rounds])) {
                 System.out.println("Correct!");
+                rounds++;
             } else {
-                System.out.println("'" + answer + "'" + wrong + "'" + result + "'");
+                System.out.println("'" + answer + "'" + wrong + "'" + result[rounds] + "'");
                 System.out.println(wrong2 + userName);
                 break;
             }
 
-            rounds++;
         }
 
-        if (Engine.rounds == 3) {
+        if (rounds == 3) {
             System.out.println("Congratulations, " + userName + "!");
         }
     }
 }
+
