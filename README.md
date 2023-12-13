@@ -32,7 +32,9 @@ make run-dist
 > https://asciinema.org/a/Op4ZK2Jwlytii14eskE5J1THe  
 **"Простое ли число?"**
 
+---
 Description in English :sunglasses::blue_heart: ---->
+---
 
 Hello everyone!
 This is my first project on GitHub during my Hexlet training.
@@ -52,17 +54,17 @@ make run-dist
 
 ## Примеры работы каждой игры: ##
 
-> https://asciinema.org/a/2LnivPEB41y2arbNjsomtIrE6
+> https://asciinema.org/a/2LnivPEB41y2arbNjsomtIrE6  
 **"Parity check"**
 
-> https://asciinema.org/a/aAidtKKw3IKA9va11UbnqMyXE
+> https://asciinema.org/a/aAidtKKw3IKA9va11UbnqMyXE  
 **"Calculator"**
 
-> https://asciinema.org/a/KWBKXeCVC8bVdbazUmde9XSgB
+> https://asciinema.org/a/KWBKXeCVC8bVdbazUmde9XSgB  
 **"Greatest common divisor"**
 
-> https://asciinema.org/a/YIBDK9CrGaBMQqF8BzryS8WL1
+> https://asciinema.org/a/YIBDK9CrGaBMQqF8BzryS8WL1  
 **"Arithmetic progression"**
 
-> https://asciinema.org/a/Op4ZK2Jwlytii14eskE5J1THe
+> https://asciinema.org/a/Op4ZK2Jwlytii14eskE5J1THe  
 **"Is it a prime number?"**
