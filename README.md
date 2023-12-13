@@ -34,7 +34,7 @@ make run-dist
 
 
 ---
-Description in English :sunglasses::blue_heart: ---->
+#### Description in English :sunglasses::blue_heart: #### ---->
 ---
 
 Hello everyone!
@@ -53,7 +53,7 @@ To run, use:
 make run-dist
 ```
 
-## Примеры работы каждой игры: ##
+## Examples of each game: ##
 
 > https://asciinema.org/a/2LnivPEB41y2arbNjsomtIrE6  
 **"Parity check"**
