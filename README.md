@@ -1,6 +1,6 @@
 [![Actions Status](https://github.com/DEGTEVUWU/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/DEGTEVUWU/java-project-61/actions)                                                               [![Maintainability](https://api.codeclimate.com/v1/badges/b8b63b3985750b7fe6c4/maintainability)](https://codeclimate.com/github/DEGTEVUWU/java-project-61/maintainability)
 
-Hello everyone!
+Hello everyone!  
 I present my project:
 
 These are 5 math games that run on the console. The menu will be displayed first
