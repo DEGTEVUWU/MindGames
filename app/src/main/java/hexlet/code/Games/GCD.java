@@ -18,7 +18,6 @@ public class GCD {
     }
 
     public static void dataEntry() {
-
         String[][] roundsData = new String[Engine.ROUNDS][Engine.QUESTION_AND_ANSWER];
 
         for (var i = 0; i < roundsData.length; i++) {
