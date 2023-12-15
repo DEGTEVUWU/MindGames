@@ -6,11 +6,11 @@ public class Engine {
     public static final int INDEX_RESULT = 1;
     public static final int INDEX_QUESTION = 0;
     public static final int QUESTION_AND_ANSWER = 2;
+    public static int rounds = 0;
+    public static String wrongAnswer1 = " is wrong answer ;(. Correct answer was ";
+    public static String wrongAnswer2 = "Let's try again, ";
     public static void communication(String description, String[][] roundsData) {
         Scanner scanner = new Scanner(System.in);
-        int rounds = 0;
-        String wrongAnsweer1 = " is wrong answer ;(. Correct answer was ";
-        String wrongAnswer2 = "Let's try again, ";
 
         System.out.println("");
         System.out.println("Welcome to the Brain Games!");
@@ -31,7 +31,7 @@ public class Engine {
                 System.out.println("Correct!");
                 rounds++;
             } else {
-                System.out.println("'" + answer + "'" + wrongAnsweer1 + "'" + roundsData[rounds][INDEX_RESULT] + "'");
+                System.out.println("'" + answer + "'" + wrongAnswer1 + "'" + roundsData[rounds][INDEX_RESULT] + "'");
                 System.out.println(wrongAnswer2 + userName);
                 break;
             }
