@@ -9,8 +9,16 @@ public class App {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
-        System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet");
+        System.out.print("Please enter the game number and press Enter.\n"
+                + "1 - Greet\n"
+                + "2 - Even\n"
+                + "3 - Calc\n"
+                + "4 - GCD\n"
+                + "5 - Progression\n"
+                + "6 - Prime\n"
+                + "0 - Exit\n"
+                + "Your choice: ");
+        /*System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
@@ -18,7 +26,7 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
-
+         */
         String choice = scanner.next();
 
         switch (choice) {
@@ -31,5 +39,6 @@ public class App {
             //default -> throw new RuntimeException(System.out.println("Unknown choice: " + choice));
             default -> System.out.println("Unknown choice: " + choice);
         }
+        scanner.close();
     }
 }
