@@ -1,35 +1,35 @@
 package hexlet.code.Games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-import java.util.Arrays;
-
 
 public class Progression {
-    public static String result;
+    //public static String result;
     static final String DESCRIPTION  = "What number is missing in the progression?";
 
     public static String[] makeProgression(int first, int step, int length) {
-        int[] progression = new int[length];
-        int index = first;
-        for (var y = 0; y < length; y++) {
-            progression[y] = index;
-            index += step;
+        String[] progression = new String[length];
+        for (var i = 0; i < length; i++) {
+            progression[i] = Integer.toString(first + step * i);
         }
-        String[] term = Arrays.stream(progression).mapToObj(Integer::toString).toArray(String[]::new);
-        return term;
+        return progression;
     }
-    public static String question() {
-        int first = Utils.generateNumber(1, 200);
-        int step = Utils.generateNumber(1, 21);
-        int length = Utils.generateNumber(5, 10);
-        int swap = Utils.generateNumber(1, length - 1);
+    public static String[] generateRoundData() {
+        final int min = 1;
+        final int max = 200;
+        final int maxToStep =  21;
+        final int minToLength = 5;
+        final int maxToLength = 10;
+        int first = Utils.generateNumber(min, max);
+        int step = Utils.generateNumber(min, maxToStep);
+        int length = Utils.generateNumber(minToLength, maxToLength);
+        int swap = Utils.generateNumber(min, length - 1);
 
         String[] progression = makeProgression(first, step, length);
-        result = progression[swap];
+        String result = progression[swap];
         progression[swap] = "..";
         String question = String.join(" ", progression);
 
-        return question;
+        return new String[] {question, result};
 
     }
 
@@ -37,8 +37,8 @@ public class Progression {
         String[][] roundsData = new String[Engine.ROUNDS][Engine.QUESTION_AND_ANSWER];
 
         for (var i = 0; i < roundsData.length; i++) {
-            roundsData[i][Engine.INDEX_QUESTION] = question();
-            roundsData[i][Engine.INDEX_RESULT] = result;
+            roundsData[i] = generateRoundData();
+            //roundsData[i][Engine.INDEX_RESULT] = result;
         }
         Engine.communication(DESCRIPTION, roundsData);
     }

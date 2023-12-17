@@ -41,7 +41,7 @@ public class App {
                 Prime.dataEntry();
                 break;
             default:
-                break;
+                throw new RuntimeException("Unknown choice: " + choice);
         }
     }
 }

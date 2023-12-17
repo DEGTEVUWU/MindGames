@@ -3,18 +3,23 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calculator {
-    public static int result;
     public static final String DESCRIPTION  = "What is the result of the expression?";
 
-    public static String question() {
+    public static String[] generateRoundData() {
+        final int min = 1;
+        final int max = 200;
+        final int minForOperators = 0;
+        final int maxForOperators = 2;
+        int value1 = Utils.generateNumber(min, max);
+        int value2 = Utils.generateNumber(min, max);
+        int indexOperators = Utils.generateNumber(minForOperators, maxForOperators);
 
-        int value1 = Utils.generateNumber(1, 200);
-        int value2 = Utils.generateNumber(1, 200);
-        int indexOperators = Utils.generateNumber(0, 2);
         char[] operators = {'+', '-', '*'};
         char operator = operators[indexOperators];
-        result = result(operator, value1, value2);
-        return value1 + " " + operator + " " + value2;
+        String question = value1 + " " + operator + " " + value2;
+        String result = Integer.toString(result(operator, value1, value2));
+
+        return  new String[] {question, result};
     }
 
     private static int result(char operator, int value1, int value2) {
@@ -34,8 +39,7 @@ public class Calculator {
         String[][] roundsData = new String[Engine.ROUNDS][Engine.QUESTION_AND_ANSWER];
 
         for (var i = 0; i < roundsData.length; i++) {
-            roundsData[i][Engine.INDEX_QUESTION] = question();
-            roundsData[i][Engine.INDEX_RESULT] = String.valueOf(result);
+            roundsData[i] = generateRoundData();
         }
         Engine.communication(DESCRIPTION, roundsData);
     }

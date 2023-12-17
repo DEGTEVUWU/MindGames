@@ -1,9 +1,7 @@
+# Brain Games! #
 [![Actions Status](https://github.com/DEGTEVUWU/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/DEGTEVUWU/java-project-61/actions)                                                               [![Maintainability](https://api.codeclimate.com/v1/badges/b8b63b3985750b7fe6c4/maintainability)](https://codeclimate.com/github/DEGTEVUWU/java-project-61/maintainability)
 
-Hello everyone!  
-I present my project:
-
-# Brain Games! #
+## About ##
 
 These are 5 math games that run on the console. The menu will be displayed first
 then, depending on the player’s choice, one of 5 games will be displayed. The player will have to answer all questions correctly to win. If the player makes a mistake, the game will notify him and will be over. Try again to win!
