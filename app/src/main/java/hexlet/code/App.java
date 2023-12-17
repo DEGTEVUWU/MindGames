@@ -6,7 +6,7 @@ import hexlet.code.Games.Progression;
 import hexlet.code.Games.Prime;
 import java.util.Scanner;
 public class App {
-    static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
         System.out.print("Please enter the game number and press Enter.");
