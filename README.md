@@ -15,15 +15,15 @@ Good luck!
 ### Installing ###
 
 ```
->> git clone git@github.com:DEGTEVUWU/java-project-61.git
->> cd java-project-61
->> make install
+git clone git@github.com:DEGTEVUWU/java-project-61.git
+cd java-project-61
+make install
 ```
 
 ### To run, use: ###
 
 ```
->> make run-dist
+make run-dist
 ```
 
 ## Examples of each game: ##
