@@ -28,7 +28,7 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "'" + wrongAnswer1 + "'" + roundData[INDEX_RESULT] + "'");
-                System.out.println(wrongAnswer2 + userName);
+                System.out.println(wrongAnswer2 + userName + "!");
                 return;
             }
         }
