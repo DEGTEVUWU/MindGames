@@ -22,26 +22,14 @@ public class App {
         String choice = scanner.next();
 
         switch (choice) {
-            case "1":
-                Cli.console();
-                break;
-            case "2":
-                ParityCheck.dataEntry();
-                break;
-            case "3":
-                Calculator.dataEntry();
-                break;
-            case "4":
-                GCD.dataEntry();
-                break;
-            case "5":
-                Progression.dataEntry();
-                break;
-            case "6":
-                Prime.dataEntry();
-                break;
-            default:
-                throw new RuntimeException("Unknown choice: " + choice);
+            case "1" -> Cli.console();
+            case "2" -> ParityCheck.dataEntry();
+            case "3" -> Calculator.dataEntry();
+            case "4" -> GCD.dataEntry();
+            case "5" -> Progression.dataEntry();
+            case "6" -> Prime.dataEntry();
+            //default -> throw new RuntimeException(System.out.println("Unknown choice: " + choice));
+            default -> System.out.println("Unknown choice: " + choice);
         }
     }
 }
