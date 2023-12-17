@@ -3,7 +3,6 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
-    //public static String result;
     static final String DESCRIPTION  = "What number is missing in the progression?";
 
     public static String[] makeProgression(int first, int step, int length) {
@@ -38,7 +37,6 @@ public class Progression {
 
         for (var i = 0; i < roundsData.length; i++) {
             roundsData[i] = generateRoundData();
-            //roundsData[i][Engine.INDEX_RESULT] = result;
         }
         Engine.communication(DESCRIPTION, roundsData);
     }

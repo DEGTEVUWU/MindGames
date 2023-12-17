@@ -8,7 +8,6 @@ public class Engine {
     public static final int QUESTION_AND_ANSWER = 2;
     public static void communication(String description, String[][] roundsData) {
         Scanner scanner = new Scanner(System.in);
-        int rounds = 0;
         final String wrongAnswer1 = " is wrong answer ;(. Correct answer was ";
         final String wrongAnswer2 = "Let's try again, ";
 
@@ -21,16 +20,14 @@ public class Engine {
         System.out.println(description);
 
         for (String[] roundData : roundsData) {
-            System.out.println("Question: " + roundsData[rounds][INDEX_QUESTION]);
+            System.out.println("Question: " + roundData[INDEX_QUESTION]);
             System.out.print("Your answer: ");
             String answer = scanner.next();
 
-
-            if (answer.equals(roundsData[rounds][INDEX_RESULT])) {
+            if (answer.equals(roundData[INDEX_RESULT])) {
                 System.out.println("Correct!");
-                rounds++;
             } else {
-                System.out.println("'" + answer + "'" + wrongAnswer1 + "'" + roundsData[rounds][INDEX_RESULT] + "'");
+                System.out.println("'" + answer + "'" + wrongAnswer1 + "'" + roundData[INDEX_RESULT] + "'");
                 System.out.println(wrongAnswer2 + userName);
                 return;
             }
