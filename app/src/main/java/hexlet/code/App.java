@@ -29,7 +29,6 @@ public class App {
             case "5" -> Progression.dataEntry();
             case "6" -> Prime.dataEntry();
             default -> throw new RuntimeException("Unknown choice: " + choice);
-            //default -> System.out.println("Unknown choice: " + choice);
         }
         scanner.close();
     }

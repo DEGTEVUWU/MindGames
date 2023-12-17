@@ -8,8 +8,8 @@ public class Engine {
     public static final int QUESTION_AND_ANSWER = 2;
     public static void communication(String description, String[][] roundsData) {
         Scanner scanner = new Scanner(System.in);
-        final String wrongAnswer1 = " is wrong answer ;(. Correct answer was ";
-        final String wrongAnswer2 = "Let's try again, ";
+        //final String wrongAnswer1 = " is wrong answer ;(. Correct answer was ";
+        //final String wrongAnswer2 = "Let's try again, ";
 
         System.out.println("");
         System.out.println("Welcome to the Brain Games!");
@@ -27,8 +27,9 @@ public class Engine {
             if (answer.equals(roundData[INDEX_RESULT])) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "'" + wrongAnswer1 + "'" + roundData[INDEX_RESULT] + "'");
-                System.out.println(wrongAnswer2 + userName + "!");
+                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was " + "'" + roundData[INDEX_RESULT] + "'");
+                System.out.println("Let's try again, " + userName + "!");
+                scanner.close();
                 return;
             }
         }
