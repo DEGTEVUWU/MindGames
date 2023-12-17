@@ -10,9 +10,7 @@ Good luck!
 
 ### Requirements ###
 
-```
 >> Having [Git installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-```
 
 ### Installing ###
 
