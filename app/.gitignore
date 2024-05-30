@@ -29,7 +29,7 @@ build
 bin
 .project*
 .classpath
-.idea/
+.idea
 .factorypath 
 
 # build
