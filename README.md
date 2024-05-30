@@ -1,4 +1,4 @@
-# Brain Games! #
+# Mind Games! #
 [![Actions Status](https://github.com/DEGTEVUWU/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/DEGTEVUWU/java-project-61/actions)                                                               [![Maintainability](https://api.codeclimate.com/v1/badges/b8b63b3985750b7fe6c4/maintainability)](https://codeclimate.com/github/DEGTEVUWU/java-project-61/maintainability)
 
 ## Description ##
@@ -15,14 +15,25 @@ Good luck!
 ### Installing ###
 
 ```
-git clone git@github.com:DEGTEVUWU/java-project-61.git
-cd java-project-61
-make install
+git clone git@github.com:DEGTEVUWU/MindGames.git
+cd MindGames
 ```
-
+В терминале проверить какая версия джавы добавлена в JAVA_HOME=
+``` 
+echo $JAVA_HOME
+```
+Изменить конфигурацию настроек в файле build.gradle.kts на вашу текущую локальную версию джавы
+``` 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(your_version_java))
+    }
+}
+```
 ### To run, use: ###
 
 ```
+make install
 make run-dist
 ```
 
