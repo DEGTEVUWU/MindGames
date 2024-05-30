@@ -18,11 +18,11 @@ Good luck!
 git clone git@github.com:DEGTEVUWU/MindGames.git
 cd MindGames
 ```
-В терминале проверить какая версия джавы добавлена в JAVA_HOME=
+In the terminal, check which Java version is added to JAVA_HOME=
 ``` 
 echo $JAVA_HOME
 ```
-Изменить конфигурацию настроек в файле build.gradle.kts на вашу текущую локальную версию джавы
+Change settings configuration in build.gradle.kts file to your current local java version
 ``` 
 java {
     toolchain {
